@@ -24,7 +24,6 @@ export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=linux-lts
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
 export pkgbase=linux-lts
-pkgver=$(uname -r)
 export pkgver=$(uname -r|(IFS=- read x _ _;echo $x))
 export pkgrel=$(uname -r|(IFS=- read _ x _;echo $x))
 export pkgdesc='LTS Linux'
